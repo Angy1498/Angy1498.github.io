@@ -50,6 +50,13 @@
             const direccion = document.getElementById("direccion").value;
 
             console.log(nombre, apellido, direccion); 
+            push
+                ref(database, 'proyseptimo'),
+                {
+                    mane: nombre, 
+                    last_name: apellido, 
+                    city: direccion
+                }
 
         }
       </script>
