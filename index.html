@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nombre del Restaurante</title>
+    <title>crud</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
@@ -22,41 +22,68 @@
         </div>
     </header>
 
-    <section id="inicio">
-        <div class="container">
-            <h2>Bienvenido a nuestro restaurante</h2>
-            <p>Disfruta de una experiencia culinaria única en nuestro acogedor restaurante.</p>
-        </div>
-    </section>
-
-    <section id="menu">
-        <div class="container">
-            <h2>Nuestro Menú</h2>
-            <div class="menu-item">
-                <img src="img/imag1.png" alt="imag1">
-                <h3>Conchas Asadas</h3>
-                <p>Conchas asadas en su propio jugo con un toque de especies y bañadas en refrito costeño.
-                   Acompañadas de papas fritas o patacones.</p>
-            </div>
-            <!-- Agrega más elementos de menú según sea necesario -->
-        </div>
-    </section>
+    
 
     <section id="reservas">
-        <div class="container">
-            <h2>Reserva una mesa</h2>
-            <p>Opcional</p>
-            <!-- Formulario de reserva -->
-        </div>
-    </section>
+        <div class="container1">
+            <form >
+                <div class="modal-body">
+                    <input id="id" type="hidden">
+                    <br>
+                    <h1>RESERVA TU MESA</h1>
+                    <div class="form-group">                                    
+                      <label>Nombre</label>
+                      <input id="nombre" type="text" class="form-control" required>
+                    </div> 
+                    <br>   
+                    <div class="form-group">
+                      <label>Email</label>
+                      <input id="email" type="text" class="form-control" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                      <label>Telefono</label>
+                      <input id="telefono" type="number" class="form-control" required>
+                    </div>  
+                    <br>
+                    <div class="form-group">
+                      <label>Fecha de reserva</label>
+                      <input id="fecha" type="date" class="form-control" required>
+                    </div>   
+                    <br>   
+                    <div class="form-group">
+                      <label>Numero de personas</label>
+                      <input id="personas" type="number" class="form-control" required>
+                    </div>
+                    <br>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal" tabindex="2">Cancelar</button>
+                        <button type="submit" id="btnGuardar" class="btn btn-danger" translate="1">Guardar</button>
+                    </div>                         
+                </div>
+            </form>   
+            <br>   
+            <table border="1" id="Registro">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Telefono</th>
+                        <th>Fecha de reserva</th>
+                        <th>Numero de personas</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="Datos"></tbody>
 
-    <section id="contacto">
-        <div class="container">
-            <h2>Contactos</h2>
-            <p>022197148 - 097909887</p>
-            <!-- Información de contacto -->
+            </table>
         </div>
     </section>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase.js"></script>
+
+    <script src="index.js"></script>
 
     <footer>
         <div class="container">
