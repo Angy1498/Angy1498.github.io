@@ -1,19 +1,18 @@
 var firebaseConfig = {
-    apiKey: "AIzaSyBKZ9vLEVpAXQgaoMljisg8Pta4lKIoDaI",
-    authDomain: "empresa-septimo-4c747.firebaseapp.com",
-    databaseURL: "https://empresa-septimo-4c747-default-rtdb.firebaseio.com",
-    projectId: "empresa-septimo-4c747",
-    storageBucket: "empresa-septimo-4c747.appspot.com",
-    messagingSenderId: "500756136468",
-    appId: "1:500756136468:web:6ee041d687cddfd2815d01",
-    measurementId: "G-9ENXWEC95P"
+  apiKey: "AIzaSyABmQVJirn3Hn7CYqZ07ITUnVRumWHIa8U",
+  authDomain: "solecito-f6eb3.firebaseapp.com",
+  databaseURL: "https://solecito-f6eb3-default-rtdb.firebaseio.com",
+  projectId: "solecito-f6eb3",
+  storageBucket: "solecito-f6eb3.appspot.com",
+  messagingSenderId: "124376971279",
+  appId: "1:124376971279:web:9daef3de17c0c1b5de4b7a"
   };
 
   
 
   firebase.initializeApp(firebaseConfig);
   const db = firebase.database();
-  datosClientes = db.ref().child('registroCliente');
+  datosClientes = db.ref().child('AngelicaLogacho');
   Datos = $('#Datos').val();
   $('form').submit(function(e){
     e.preventDefault();
@@ -102,7 +101,7 @@ var firebaseConfig = {
         }).then((result) => {
         if (result.value) {
             let id = $(this).closest('tr').attr('id');
-            db.ref(`registroCliente/${id}`).remove() 
+            db.ref(`AngelicaLogacho/${id}`).remove() 
             Swal.fire('¡Eliminado!', 'El registro ha sido eliminado.','success')
         }
         })        
